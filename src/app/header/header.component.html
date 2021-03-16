@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light sticky-top justify-content-start">
+    <a class="navbar-brand p-0" href="/">
+      <img src="https://www.mochilerosviajeros.com/wp-content/uploads/2019/12/icono-peru.jpg" width="40" height="40" alt="">
+    </a>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="d-inline-flex">
+            <input 
+                class="form-control"
+                type="number"
+                id="dni"
+                name="dni"
+                placeholder="Ingrese su DNI"
+                ngModel
+                required
+                pattern="^[1-9]+[0-9]{7,}$">
+            <button 
+                class="btn btn-primary"
+                type="submit"
+                [disabled]="!f.valid">Consultar</button>
+        </div>
+    </form>
+</nav>

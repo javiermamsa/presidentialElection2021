@@ -1,0 +1,16 @@
+.content {
+    justify-content: flex-end;
+    min-height: 250px;
+}
+
+.background {
+    height: calc(100vh - 70px);
+    background-image: url(https://image.freepik.com/free-vector/modern-red-flowing-wave-banner-design_1035-18544.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+@media (min-width: 992px) {
+    .content { min-height: 350px; }
+}
