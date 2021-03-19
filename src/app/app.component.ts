@@ -6,25 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  userData!:{
-    dni: string,
-    mesa: string,
-    apellidoPaterno: string,
-    apellidoMaterno: string,
-    nombres: string,
-    sexo: string,
-    edad: string
-  }; 
+  userData!: {
+    'APELLIDO MATERNO': string;
+    'APELLIDO PATERNO': string;
+    EDAD: string;
+    MESA: string;
+    NOMBRES: string;
+    SEXO: string;
+  };
+  allowed = true;
 
-  onFormSubmited(dni: {}) {
-    this.userData = {
-      dni: "44042844",
-      mesa: "083106",
-      apellidoPaterno: "MAMANI",
-      apellidoMaterno: "SALINAS",
-      nombres: "JAVIER HENRIQUE",
-      sexo: "M",
-      edad: "34"
-    };
+  onFormSubmited(dni: {
+    'APELLIDO MATERNO': string;
+    'APELLIDO PATERNO': string;
+    EDAD: string;
+    MESA: string;
+    NOMBRES: string;
+    SEXO: string}) {
+    this.userData = dni
+  }
+
+  isUserAllowed(allowed: boolean) {
+    this.allowed = allowed;
   }
 }

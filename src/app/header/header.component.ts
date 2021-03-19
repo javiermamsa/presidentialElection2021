@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { DataFetchService } from '../shared/data-fetch.service';
 
 @Component({
   selector: 'app-header',
@@ -7,15 +8,25 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  @Output() formSubmited = new EventEmitter<{dni: string}>();
+  @Output() formSubmited = new EventEmitter<any>();
+  @Output() userAllowed = new EventEmitter<boolean>();
   id: string = '';
+  allowed = true;
 
-  constructor() { }
+  constructor(private dataFetchService: DataFetchService) {}
 
   onSubmit(form: NgForm) {
-    this.id = form.value.dni
-    this.formSubmited.emit({dni: this.id})
+    this.id = form.value.dni;
+    this.dataFetchService.fetchDni(this.id).subscribe(response => {
+      if(response) {
+        this.allowed = true;
+        this.formSubmited.emit(response);
+        this.userAllowed.emit(this.allowed);
+      } else {
+        this.allowed = false;
+        this.userAllowed.emit(this.allowed);
+      }
+    });
     form.reset();
   }
-
 }

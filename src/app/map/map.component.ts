@@ -7,13 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class MapComponent {
   @Input() element!:{
-    dni: string,
-    mesa: string,
-    apellidoPaterno: string,
-    apellidoMaterno: string,
-    nombres: string,
-    sexo: string,
-    edad: string
+    'APELLIDO MATERNO': string,
+    'APELLIDO PATERNO': string,
+    EDAD: string
+    MESA: string,
+    NOMBRES: string,
+    SEXO: string,
   };
 
   constructor() { }
