@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DNI } from './shared/dni.model';
 
 @Component({
   selector: 'app-root',
@@ -6,23 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  userData!: {
-    'APELLIDO MATERNO': string;
-    'APELLIDO PATERNO': string;
-    EDAD: string;
-    MESA: string;
-    NOMBRES: string;
-    SEXO: string;
-  };
+  userData!: DNI;
   allowed = true;
 
-  onFormSubmited(dni: {
-    'APELLIDO MATERNO': string;
-    'APELLIDO PATERNO': string;
-    EDAD: string;
-    MESA: string;
-    NOMBRES: string;
-    SEXO: string}) {
+  onFormSubmited(dni: DNI) {
     this.userData = dni
   }
 
