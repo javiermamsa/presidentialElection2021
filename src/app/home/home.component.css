@@ -1,6 +1,6 @@
 .content {
     justify-content: flex-end;
-    min-height: 350px;
+    min-height: 300px;
 }
 
 .background {
@@ -12,14 +12,14 @@
 }
 
 @media (min-width: 768px) {
-    .content { min-height: 280px; }
+    .content { min-height: 260px; }
     .background { background-size: contain; }
 }
 
 @media (min-width: 992px) {
-    .content { min-height: 400px; }
+    .content { min-height: 360px; }
 }
 
 @media (min-width: 1200px) {
-    .content { min-height: 360px; }
+    .content { min-height: 310px; }
  }
