@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DNI } from '../shared/dni.model';
 
 @Component({
   selector: 'app-map',
@@ -6,14 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent {
-  @Input() element!:{
-    'APELLIDO MATERNO': string,
-    'APELLIDO PATERNO': string,
-    EDAD: string
-    MESA: string,
-    NOMBRES: string,
-    SEXO: string,
-  };
+  @Input() element!:DNI;
 
   constructor() { }
 
