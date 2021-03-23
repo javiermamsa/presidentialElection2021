@@ -1,14 +1,16 @@
 <div class="container">
     <div class="row">
         <div class="col-12 mt-4">
-            <p class="fs-5 mb-2">Hola {{element.nombres}},</p>
-            <p>Tu número de mesa es: <span class="fw-bold">{{element.mesa}}</span><br/>
-            Por favor dirígete en la siguiente dirección:</p>
+            <p class="fs-5 mb-2 lead">Hola {{element.nombres}},</p>
+            <p class="mb-2 lh-1">Tu número de mesa es: <span class="fw-bold">{{element.mesa}}</span></p>
+            <p class="mb-5">
+                Por favor sigue nuestras indicaciones, tu mesa de mesa de votación se encuentra en la <u>sala {{ colour }}</u>.
+            </p>
             <div class="d-flex flex-column">
-                <p class="fs-6 fw-bold text-center">Mapa central</p>
-                <img src="/assets/img/general-map.JPG" alt="mapa-central" class="img-responsive mb-4">
-                <p class="fs-6 fw-bold text-center">Croquis de la sala</p>
-                <img src="/assets/img/blue.jpg" alt="mapa" class="img-responsive">
+                <p class="h5 text-center text-primary">Mapa central</p>
+                <img src="/assets/img/mapa-{{colour}}.JPG" alt="mapa-central" class="mapa-central img-responsive mb-5">
+                <p class="h5 text-center text-primary">Croquis: Sala {{ colour }}</p>
+                <img src="/assets/img/croquis-{{colour}}.jpg" alt="mapa" class="img-responsive">
             </div>
         </div>
     </div>

@@ -11,14 +11,12 @@ import { DniService } from '../shared/dni.service';
 export class HeaderComponent {
   @Output() formSubmited = new EventEmitter<any>();
   @Output() userAllowed = new EventEmitter<boolean>();
-  //id: string = '';
   allowed = true;
 
   constructor(private dataFetchService: DataFetchService,
               private dniService: DniService) {}
 
   onSubmit(form: NgForm) {
-    //this.id = form.value.dni;
     this.dniService.setDni(form.value.dni);
     this.dataFetchService.fetchDni(this.dniService.getDni()).subscribe(response => {
       if(response) {
