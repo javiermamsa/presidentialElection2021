@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DNI } from '../shared/dni.model';
+import { DniService } from '../shared/dni.service';
 
 @Component({
   selector: 'app-map',
@@ -10,13 +11,15 @@ export class MapComponent implements OnInit {
   @Input() element!:DNI;
   mesa:number = 0;
   colour:string = '';
+  dni: string = '';
 
-  constructor() { }
+  constructor(private dniService: DniService) { }
   ngOnInit() {
   }
 
   ngOnChanges() {
     this.mesa = parseInt(this.element.mesa);
+    this.dni = this.dniService.getDni();
 
     if (this.mesa >= 83036 && this.mesa <= 83095) {
       this.colour = 'amarilla';
