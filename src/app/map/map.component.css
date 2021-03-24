@@ -1,13 +1,6 @@
-@media (min-width: 992px) {
-    .mapa-central {
-        max-width: 800px;
-        margin: 0 auto;
-    }
- }
-
- .welcome-container {
+.welcome-container {
      margin-bottom: 30px;
- }
+}
 
 .info-container {
     border: 4px solid black;
@@ -35,7 +28,7 @@
 
 .info-container--amarilla {
     border-color: #ffc107;
-    color: #ffc107;
+    color: #ff8c19;
 }
 
 .info-container--gris {
@@ -73,10 +66,26 @@
 
 .map-container--amarilla {
     border-color: #ffc107;
-    color: #ffc107;
+    color: #ff8c19;
 }
 
 .map-container--gris {
     border-color: #6c757d;
     color: #6c757d;
 }
+
+@media (min-width: 992px) {
+    .central-map {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .intern-map {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .welcome-container {
+        margin-bottom: 40px;
+    }
+ }

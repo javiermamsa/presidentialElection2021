@@ -12,6 +12,7 @@ export class MapComponent implements OnInit {
   mesa:number = 0;
   colour:string = '';
   dni: string = '';
+  shortName: string = '';
 
   constructor(private dniService: DniService) { }
   ngOnInit() {
@@ -20,6 +21,10 @@ export class MapComponent implements OnInit {
   ngOnChanges() {
     this.mesa = parseInt(this.element.mesa);
     this.dni = this.dniService.getDni();
+
+    this.shortName = this.element.nombres
+    const counter: number = this.shortName.indexOf(' ');
+    this.shortName = this.shortName.substring(0, counter < 0 ? this.shortName.length : counter);
 
     if (this.mesa >= 83036 && this.mesa <= 83095) {
       this.colour = 'amarilla';
