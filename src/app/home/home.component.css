@@ -1,11 +1,12 @@
 .content {
     justify-content: flex-end;
     min-height: 300px;
+    margin-bottom: 5px;
 }
 
 .background {
     height: calc(100vh - 70px);
-    background-image: url("/assets/img/wave-banner-design.jpg");
+    background-image: url("/assets/img/wave-banner-design.webp");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -23,3 +24,4 @@
 @media (min-width: 1200px) {
     .content { min-height: 310px; }
  }
+ 

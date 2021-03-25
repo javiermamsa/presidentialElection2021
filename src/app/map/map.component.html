@@ -3,34 +3,36 @@
         <div class="col-12 mt-4">
             <div class="welcome-container">
                 <p class="fs-5 mb-2 lead">Hola {{shortName | titlecase}},</p>
-                <p class="mb-2 lh-1">Tu número de mesa de sufragio es: <span class="fw-bold">{{element.mesa}}</span></p>
+                <!-- <p class="mb-2 lh-1">Tu número de mesa de sufragio es: <span class="fw-bold">{{element.mesa}}</span></p> -->
                 <p>Por favor sigue nuestras indicaciones, tu mesa de mesa de votación se encuentra en la:</p>
             </div>
             <div class="info-container info-container--{{colour}}">
                 <p class="text-center text-uppercase fw-bold">Sala {{ colour }}</p>
-                <p class="text-body text-center mb-1">Apellidos:</p>
-                <p class="text-body text-center">
+                <p class="text-body text-center mb-0">Nº de Mesa de Sufragio:</p>
+                <p class="text-body text-center mb-2 fw-bold">{{ element.mesa }}</p>
+                <p class="text-body text-center mb-0">Apellidos:</p>
+                <p class="text-body text-center mb-2">
                     <span class="me-2">{{ element.apellidoPaterno }}</span>
                     <span>{{ element.apellidoMaterno }}</span>
                 </p>
-                <p class="text-body text-center mb-1">Nombres:</p>
-                <p class="text-body text-center">{{ element.nombres }}</p>
-                <p class="text-body text-center mb-1">DNI:</p>
+                <p class="text-body text-center mb-0">Nombres:</p>
+                <p class="text-body text-center mb-2">{{ element.nombres }}</p>
+                <p class="text-body text-center mb-0">DNI:</p>
                 <p class="text-body text-center mb-0">{{ dni }}</p>
             </div>
             <div class="d-flex flex-column map-container map-container--{{colour}}">
                 <p class="text-title">Mapa central</p>
                 <img
-                    src="/assets/img/mapa-{{colour}}.JPG"
+                    src="/assets/img/mapa-{{colour}}.webp"
                     alt="mapa-central"
-                    class="central-map img-responsive"
+                    class="central-map img-fluid"
                     loading="lazy"
                 >
                 <p class="text-title">Croquis: Sala {{ colour }}</p>
                 <img
-                    src="/assets/img/croquis-{{colour}}.jpg"
+                    src="/assets/img/croquis-{{colour}}.webp"
                     alt="mapa"
-                    class="intern-map img-responsive"
+                    class="intern-map img-fluid"
                     loading="lazy"
                 >
             </div>
