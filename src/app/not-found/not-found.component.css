@@ -5,7 +5,7 @@
 
 .background {
     height: calc(100vh - 70px);
-    background-image: url("/assets/img/wave-banner-design.jpg");
+    background-image: url("/assets/img/wave-banner-design.webp");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;

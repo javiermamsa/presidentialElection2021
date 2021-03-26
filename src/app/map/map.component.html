@@ -4,7 +4,7 @@
             <div class="welcome-container">
                 <p class="fs-5 mb-2 lead">Hola {{shortName | titlecase}},</p>
                 <!-- <p class="mb-2 lh-1">Tu número de mesa de sufragio es: <span class="fw-bold">{{element.mesa}}</span></p> -->
-                <p>Por favor sigue nuestras indicaciones, tu mesa de mesa de votación se encuentra en la:</p>
+                <p>Por favor sigue nuestras indicaciones, tu de mesa de votación se encuentra en la:</p>
             </div>
             <div class="info-container info-container--{{colour}}">
                 <p class="text-center text-uppercase fw-bold">Sala {{ colour }}</p>
@@ -30,7 +30,7 @@
                 >
                 <p class="text-title">Croquis: Sala {{ colour }}</p>
                 <img
-                    src="/assets/img/croquis-{{colour}}.webp"
+                    src="/assets/img/areas/croquis-{{colour}}-{{element.mesa}}.jpg"
                     alt="mapa"
                     class="intern-map img-fluid"
                     loading="lazy"
