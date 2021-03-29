@@ -1,13 +1,15 @@
-<div class="container">
-    <div class="row">
-        <div class="col-12 mt-4">
+<div class="container-fluid container-fluid--{{colour}}">
+    <div class="row justify-content-md-center">
+        <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center">
             <div class="welcome-container">
-                <p class="fs-5 mb-2 lead">Hola {{shortName | titlecase}},</p>
-                <!-- <p class="mb-2 lh-1">Tu número de mesa de sufragio es: <span class="fw-bold">{{element.mesa}}</span></p> -->
-                <p>Por favor sigue nuestras indicaciones, tu de mesa de votación se encuentra en la:</p>
+                <p class="fs-5 lead">Hola {{shortName | titlecase}},</p>
+                <p class="mb-0">Hagamos más segura la votación, para esto te guiaremos con los mapas del establecimiento.
+                    <br>Tu mesa de votación se encuentra en la:</p>
             </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
             <div class="info-container info-container--{{colour}}">
-                <p class="text-center text-uppercase fw-bold">Sala {{ colour }}</p>
+                <p class="info-title lead">Sala {{ colour }}</p>
                 <p class="text-body text-center mb-0">Nº de Mesa de Sufragio:</p>
                 <p class="text-body text-center mb-2 fw-bold">{{ element.mesa }}</p>
                 <p class="text-body text-center mb-0">Apellidos:</p>
@@ -20,22 +22,48 @@
                 <p class="text-body text-center mb-0">DNI:</p>
                 <p class="text-body text-center mb-0">{{ dni }}</p>
             </div>
-            <div class="d-flex flex-column map-container map-container--{{colour}}">
-                <p class="text-title">Mapa central</p>
-                <img
-                    src="/assets/img/mapa-{{colour}}.webp"
-                    alt="mapa-central"
-                    class="central-map img-fluid"
-                    loading="lazy"
-                >
-                <p class="text-title">Croquis: Sala {{ colour }}</p>
-                <img
-                    src="/assets/img/areas/croquis-{{colour}}-{{element.mesa}}.jpg"
-                    alt="mapa"
-                    class="intern-map img-fluid"
-                    loading="lazy"
-                >
-            </div>
         </div>
     </div>
+</div>
+<div class="container-fluid" id="mapa-central">
+    <div class="row justify-content-md-center">
+        <div class="col-12">
+            <p class="text-title">Mapa central</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+            <img
+                src="/assets/img/mapa-{{colour}}.webp"
+                alt="mapa-central"
+                class="central-map img-fluid"
+                loading="lazy"
+            >
+        </div>
+        <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center">
+            <p class="text-description">El Mediolanum Forum di Assago, se conecta con la línea verde 
+                M2 (estación) Assago - Milanofiori Forum. Por favor sigue la indicación de la flecha {{colour}}</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid background-gray" id="mapa-sala">
+    <div class="row justify-content-md-center">
+        <div class="col-12">
+            <p class="text-title">Croquis: Sala {{ colour }}</p>
+        </div>
+        <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex align-items-start">
+            <p class="text-description text-description--croquis">Para votar más rápido, el mapa y las flechas te ayudarán a ubicar directamente tu mesa.
+                Luego de efectuado el voto por favor dirígete hacia la salida.</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4">
+            <img
+                src="/assets/img/areas/croquis-{{colour}}-{{element.mesa}}.jpg"
+                alt="mapa"
+                class="intern-map intern-map--{{colour}} img-fluid"
+                loading="lazy"
+            >
+        </div>
+    </div>
+</div>
+<div class="sticky-bar">
+    <a class="sticky-bar__label" href="#mapa-central">Mapa Central</a>
+    <a class="sticky-bar__label" href="#mapa-sala">Sala {{colour}}</a>
 </div>
