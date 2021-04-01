@@ -3,7 +3,7 @@
         <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center">
             <div class="welcome-container">
                 <p class="fs-5 lead">Hola {{shortName | titlecase}},</p>
-                <p class="mb-0">Hagamos más segura la votación, para esto te guiaremos con los mapas del establecimiento.
+                <p class="mb-0">Hagamos más segura la votación, para esto te guiaremos con los planos del local de votación.
                     <br>Tu mesa de votación se encuentra en la:</p>
             </div>
         </div>
@@ -28,7 +28,7 @@
 <div class="container-fluid" id="mapa-central">
     <div class="row justify-content-md-center">
         <div class="col-12">
-            <p class="text-title">Mapa central</p>
+            <p class="text-title">Plano del local de votación</p>
         </div>
         <div class="col-12 col-md-6 col-lg-6 col-xl-4">
             <img
@@ -39,8 +39,8 @@
             >
         </div>
         <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center">
-            <p class="text-description">El Mediolanum Forum di Assago, se conecta con la línea verde 
-                M2 (estación) Assago - Milanofiori Forum. Por favor sigue la indicación de la flecha {{colour}}</p>
+            <p class="text-description">El Mediolanum Forum di Assago, se conecta con la línea verde de la metropolitana
+                M2: Assago - Milanofiori Forum. Por favor sigue la indicación de la flecha {{colour}}</p>
         </div>
     </div>
 </div>
@@ -50,7 +50,7 @@
             <p class="text-title">Croquis: Sala {{ colour }}</p>
         </div>
         <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex align-items-start">
-            <p class="text-description text-description--croquis">Para votar más rápido, el mapa y las flechas te ayudarán a ubicar directamente tu mesa.
+            <p class="text-description text-description--croquis">Para votar más rápido, el croquis te ayudará a ubicar facilmente tu mesa.
                 Luego de efectuado el voto por favor dirígete hacia la salida.</p>
         </div>
         <div class="col-12 col-md-6 col-lg-6 col-xl-4">
@@ -64,6 +64,6 @@
     </div>
 </div>
 <div class="sticky-bar">
-    <a class="sticky-bar__label" href="#mapa-central">Mapa Central</a>
+    <a class="sticky-bar__label" href="#mapa-central">Local votación</a>
     <a class="sticky-bar__label" href="#mapa-sala">Sala {{colour}}</a>
 </div>

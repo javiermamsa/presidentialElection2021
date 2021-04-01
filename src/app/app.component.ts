@@ -9,6 +9,7 @@ import { DNI } from './shared/dni.model';
 export class AppComponent {
   userData!: DNI;
   allowed = true;
+  dniNumber = '';
 
   onFormSubmited(dni: DNI) {
     this.userData = dni
@@ -16,5 +17,9 @@ export class AppComponent {
 
   isUserAllowed(allowed: boolean) {
     this.allowed = allowed;
+  }
+
+  isDniNumber(dniNumber: string) {
+    this.dniNumber = dniNumber;
   }
 }

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DniService } from '../shared/dni.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-not-found',
@@ -7,10 +6,5 @@ import { DniService } from '../shared/dni.service';
   styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent {
-  dni: string = ''
-
-  constructor(private dniService: DniService) {
-    this.dni = this.dniService.getDni();
-  }
-
+  @Input() dni: string = '';
 }

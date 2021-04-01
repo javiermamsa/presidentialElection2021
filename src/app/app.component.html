@@ -1,11 +1,12 @@
 <app-header (formSubmited)="onFormSubmited($event)"
-            (userAllowed)="isUserAllowed($event)"></app-header>
+            (userAllowed)="isUserAllowed($event)"
+            (dniNumber)="isDniNumber($event)"></app-header>
 <div class="container-fluid">
   <div class="row no-gutters">
     <div class="col-12">
       <app-home *ngIf="!userData && allowed"></app-home>
       <app-map *ngIf="!!userData && allowed" [element]="userData"></app-map>
-      <app-not-found *ngIf="!allowed"></app-not-found>
+      <app-not-found *ngIf="!allowed" [dni]="dniNumber"></app-not-found>
     </div>
   </div>
 </div>
