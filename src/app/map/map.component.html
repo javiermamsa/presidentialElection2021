@@ -2,24 +2,24 @@
     <div class="row justify-content-md-center">
         <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center">
             <div class="welcome-container">
-                <p class="fs-5 lead">Hola {{shortName | titlecase}},</p>
-                <p class="mb-0">Hagamos más segura la votación, para esto te guiaremos con los planos del local de votación.
+                <p class="text-raleway fs-5">Hola {{shortName | titlecase}},</p>
+                <p class="text-raleway mb-0">Hagamos más segura la votación, para esto te guiaremos con los planos del local de votación.
                     <br>Tu mesa de votación se encuentra en la:</p>
             </div>
         </div>
         <div class="col-12 col-md-5 col-lg-4 col-xl-3">
             <div class="info-container info-container--{{colour}}">
                 <p class="info-title lead">Sala {{ colour }}</p>
-                <p class="text-body text-center mb-0">Nº de Mesa de Sufragio:</p>
+                <p class="text-raleway text-center mb-0">Nº de Mesa de Sufragio:</p>
                 <p class="text-body text-center mb-2 fw-bold">{{ element.mesa }}</p>
-                <p class="text-body text-center mb-0">Apellidos:</p>
+                <p class="text-raleway text-center mb-0">Apellidos:</p>
                 <p class="text-body text-center mb-2">
                     <span class="me-2">{{ element.apellidoPaterno }}</span>
                     <span>{{ element.apellidoMaterno }}</span>
                 </p>
-                <p class="text-body text-center mb-0">Nombres:</p>
+                <p class="text-raleway text-center mb-0">Nombres:</p>
                 <p class="text-body text-center mb-2">{{ element.nombres }}</p>
-                <p class="text-body text-center mb-0">DNI:</p>
+                <p class="text-raleway text-center mb-0">DNI:</p>
                 <p class="text-body text-center mb-0">{{ dni }}</p>
             </div>
         </div>
@@ -55,7 +55,7 @@
         </div>
         <div class="col-12 col-md-6 col-lg-6 col-xl-4">
             <img
-                src="/assets/img/areas/croquis-{{colour}}-{{element.mesa}}.jpg"
+                src="/assets/img/areas/croquis-{{colour}}-{{element.mesa}}.webp"
                 alt="mapa"
                 class="intern-map intern-map--{{colour}} img-fluid"
                 loading="lazy"
