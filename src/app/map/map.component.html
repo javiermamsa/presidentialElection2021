@@ -1,6 +1,6 @@
 <div class="container-fluid container-fluid--{{colour}}">
     <div class="row justify-content-md-center">
-        <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex align-items-center">
+        <div class="col-12 col-md-3 col-lg-3 col-xl-2 d-flex">
             <div class="welcome-container">
                 <p class="text-raleway fs-5">Hola {{shortName | titlecase}},</p>
                 <p class="text-raleway mb-0">Hagamos más segura la votación, para esto te guiaremos con los planos del local de votación.
@@ -12,6 +12,10 @@
                 <p class="info-title lead">Sala {{ colour }}</p>
                 <p class="text-raleway text-center mb-0">Nº de Mesa de Sufragio:</p>
                 <p class="text-body text-center mb-2 fw-bold">{{ element.mesa }}</p>
+                <p class="text-raleway text-center mb-0">Local de Votación:</p>
+                <p class="text-body text-center mb-2">Mediolanum Forum - Assago</p>
+                <p class="text-raleway text-center mb-0">Dirección:</p>
+                <p class="text-body text-center mb-2">Via Giuseppe di Vittorio 6, Assago</p>
                 <p class="text-raleway text-center mb-0">Apellidos:</p>
                 <p class="text-body text-center mb-2">
                     <span class="me-2">{{ element.apellidoPaterno }}</span>
@@ -21,6 +25,16 @@
                 <p class="text-body text-center mb-2">{{ element.nombres }}</p>
                 <p class="text-raleway text-center mb-0">DNI:</p>
                 <p class="text-body text-center mb-0">{{ dni }}</p>
+            </div>
+            <div class="info-container info-container--{{colour}}">
+                <p class="info-title lead">Protocolos de seguridad COVID-19</p>
+                <ul class="text-raleway">
+                    <li>Uso obligatorio de mascarilla.</li>
+                    <li>Distanciamiento social de 1 metro.</li>
+                    <li>Desinfección de manos.</li>
+                    <li>Toma de temperatura.</li>
+                    <li>Llevar lapicero azul.</li>
+                </ul>
             </div>
         </div>
     </div>

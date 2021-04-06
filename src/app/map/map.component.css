@@ -1,5 +1,5 @@
 .container-fluid--gris {
-    background-color: #f2f2f2;
+    background-color: #e2e3e5;
     border-radius: 25px 25px 0 0;
     margin-top: 10px;
 }
@@ -9,17 +9,17 @@
     margin-top: 10px;
 }
 .container-fluid--verde {
-    background-color: #ebffeb;
+    background-color: #d1e7dd;
     border-radius: 25px 25px 0 0;
     margin-top: 10px;
 }
 .container-fluid--azul {
-    background-color: #e1f5fe;
+    background-color: #cfe2ff;
     border-radius: 25px 25px 0 0;
     margin-top: 10px;
 }
 .container-fluid--amarilla {
-    background-color: #ffff6dc7;
+    background-color: #fff3cd;
     border-radius: 25px 25px 0 0;
     margin-top: 10px;
 }
@@ -167,10 +167,7 @@
     .sticky-bar {
         display: none;
     }
-}
-
-@media (min-width: 992px) {
     .welcome-container {
-        margin-bottom: 40px;
+        margin-top: 60px;
     }
 }
